@@ -402,6 +402,30 @@ letter-spacing: 0.5px;
   object-fit: cover;
   border-radius: 50%;
 }
+/* Add a smooth glowing effect on text */
+.glowing-text {
+  font-size: 3rem; /* You can adjust the size of the text */
+  font-family: 'Arial', sans-serif;
+  color: white; /* Initial text color */
+  text-align: center;
+  animation: glowing 1.5s ease-in-out infinite; /* Apply animation */
+}
+
+/* Keyframes for glowing animation */
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff0099, 0 0 20px #ff0099, 0 0 25px #ff0099;
+    color: #ff0099; /* Glowing color at start */
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff0099, 0 0 30px #ff0099, 0 0 40px #ff0099;
+    color: #ff3399; /* Slightly different color at the halfway point */
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff0099, 0 0 20px #ff0099, 0 0 25px #ff0099;
+    color: #ff0099; /* Back to the original glowing color */
+  }
+}
 
 .rating-title {
   font-size: 20px;
@@ -942,8 +966,6 @@ letter-spacing: 0.5px;
   }
 
   </script>
-
-
 
 </script>
 
